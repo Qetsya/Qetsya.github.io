@@ -17,7 +17,7 @@ body {
 body {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100px auto 630px;
+    grid-template-rows: 102px auto;
 }
 
 .header {
@@ -44,9 +44,10 @@ body {
     height: 100%;
 }
 
-.navigation-logo {
-    width: 150px;
-    height: 34px;
+.navigation-logo,
+.footer-logo {
+    width: 198px;
+    height: 36px;
     cursor: pointer;
 }
 
@@ -63,12 +64,9 @@ body {
 .first-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* min-width: 428px; */
+    width: 540px;
     padding-top: 40px;
     padding-bottom: 80px;
-
-    position: relative;
-    /* overflow-x: scroll; */
 }
 
 .first-container__content {
@@ -100,7 +98,8 @@ body {
 }
 
 .first-container__text,
-.additional-container__text {
+.additional-container__text,
+.navigation-list .list-item__link {
     font-weight: 400;
     color: #555555;
     margin: 0;
@@ -117,14 +116,17 @@ body {
     cursor: pointer;
 }
 
+.first-container__image-box {
+    position: relative;
+}
+
 .first-container__image {
-    width: 176px;
-    height: 278px;
+    height: 410px;
     object-fit: cover;
     position: absolute;
     z-index: 10;
-    right: 0;
-    top: 0;
+    right: -42px;
+    top: -48px;
 }
 
 /* oranzinis cont  + addit.cont*/
@@ -191,15 +193,12 @@ body {
     display: flex;
     flex-wrap: nowrap;
     gap: 40px;
-    overflow-x: scroll;
-    overflow-y: hidden;
     margin: 40px 0 92px 0;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    padding: 0 32px;
 }
 
-.additional-container__cards::-webkit-scrollbar {
-    display: none;
+.card {
+    flex: 0 0 auto;
 }
 
 .additional-container__cards .card {
@@ -266,11 +265,14 @@ body {
 
 
 /* FOOTER */
-.footer {
+.footer,
+.footer__main-container {
     display: flex;
     flex-direction: column;
     gap: 64px;
+}
 
+.footer {
     font-weight: 400;
     font-size: 20px;
     line-height: 100%;
@@ -328,7 +330,8 @@ body {
     margin-bottom: 16px;
 }
 
-.footer__copyright-text {
+.footer__copyright-text,
+.footer__copyright-advert {
     color: #999999;
 }
 
@@ -336,11 +339,118 @@ body {
     display: none;
 }
 
+.first-container,
+.additional-container__cards {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
 
+.additional-container__cards::-webkit-scrollbar {
+    display: none;
+}
+
+.first-container::-webkit-scrollbar {
+    display: none;
+}
 
 
 @media only screen and (min-width: 768px) {
+    .navigation-bars {
+        display: none;
+    }
+
+    .navigation-list {
+        display: flex;
+        list-style: none;
+        gap: 28px;
+    }
+
+    .navigation-list .list-item__link {
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 100%;
+    }
+
+    .first-container {
+        padding-bottom: 200px;
+    }
+
+    .first-container__title {
+        font-size: 96px;
+        margin-bottom: 8px;
+    }
+
+    .first-container__text {
+        margin-bottom: 17px;
+    }
+
+    .first-container__image {
+        width: 100%;
+        height: 100%;
+        position: static;
+        transform: scale(1.2);
+        overflow: visible;
+    }
+
+    .list-item__link.active{
+        color: #FF3998;
+    }
+
+    .first-container {
+        width: 100%;
+    }
+
     .promoters-logo.mobile-invisible {
+        display: initial;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        grid-template-columns: auto minmax(800px, 1280px) auto;
+        grid-template-rows: 116px auto;
+    }
+
+    .header,
+    .main,
+    .footer {
+        grid-column: 2 / 3;;
+    }
+
+    .wrapper {
+        margin: 0 80px;
+    }
+
+    .notice-container {
+        margin: 0 80px;
+        border-radius: 20px;
+    }
+
+    .additional-container__cards {
+        margin: 0 80px;
+        padding: 0;
+    }
+
+    .footer__main-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer__nav-container {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 50%;
+        gap: 0;
+    }
+
+    .footer__copyright {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer__copyright-advert {
         display: initial;
     }
 }

@@ -22,17 +22,17 @@
 
             <img class="navigation-bars" src="assets/bars-solid.svg" alt="bars">
             <ul class="navigation-list">
-                <li>
-                    <a href="#">Features</a>
+                <li class="list-item">
+                    <a class="list-item__link" href="#">Features</a>
                 </li>
-                <li>
-                    <a href="#">About</a>
+                <li class="list-item">
+                    <a class="list-item__link" href="#">About</a>
                 </li>
-                <li>
-                    <a href="#">Launch</a>
+                <li class="list-item">
+                    <a class="list-item__link" href="#">Launch</a>
                 </li>
-                <li>
-                    <a href="#">Sign Up</a>
+                <li class="list-item">
+                    <a class="list-item__link active" href="#">Sign Up</a>
                 </li>
             </ul>
         </nav>
@@ -48,10 +48,12 @@
                 <button type="button" class="first-container__button">Sign Up</button>
             </section>
 
-            <picture>
-                <source>
-                <img class="first-container__image" src="assets/graphic.svg" alt="nft-image">
-            </picture>
+            <section class="first-container__image-box">
+                <picture>
+                    <source srcset="assets/graphic.svg" media="(min-width: 768px)">
+                    <img class="first-container__image" src="assets/graphic-small.svg" alt="nft-image">
+                </picture>
+             </section>
         </article>
 
         <article class="notice-container">
@@ -84,12 +86,14 @@
             </ul>
         </article>
 
-        <article class="additional-container wrapper">
-            <h2 class="additional-container__title">LE Super Rare Auction</h2>
-            <p class="additional-container__text">We have released four limited edition NFTs early which can be bid on
+        <article class="additional-container">
+            <div class="wrapper">
+                <h2 class="additional-container__title">LE Super Rare Auction</h2>
+                <p class="additional-container__text">We have released four limited edition NFTs early which can be bid on
                 via
-                <a class="additional-container__link" href="#">OpenSea</a>.
-            </p>
+                    <a class="additional-container__link" href="#">OpenSea</a>.
+                </p>
+            </div>
 
             <div class="additional-container__cards">
                 <div class="card">
@@ -201,86 +205,88 @@
     </main>
 
     <footer class="footer wrapper">
-        <div class="footer__logo-container">
-            <a href="#">
-                <img src="assets/logo.svg" alt="nft-logo">
-            </a>
-            <span>Exclusive NFT Collection</span>
-            <ul class="footer__social-list">
-                <li>
-                    <a href="#">
-                        <img src="assets/companies/facebook.png" alt="facebook-logo">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="assets/companies/twitter.png" alt="twitter-logo">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="assets/companies/instagram.png" alt="instagram-logo">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="assets/companies/tiktok.png" alt="tiktok-logo">
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <div class="footer__main-container">
+            <div class="footer__logo-container">
+                <a href="#">
+                    <img class="footer-logo" src="assets/logo.svg" alt="nft-logo">
+                </a>
+                <span>Exclusive NFT Collection</span>
+                <ul class="footer__social-list">
+                    <li>
+                        <a href="#">
+                            <img src="assets/companies/facebook.png" alt="facebook-logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/companies/twitter.png" alt="twitter-logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/companies/instagram.png" alt="instagram-logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="assets/companies/tiktok.png" alt="tiktok-logo">
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-        <div class="footer__nav-container">
-            <nav class="footer__navigation">
-                <h4 class="footer__navigation-title">about</h4>
-                <ul class="footer__navigation-list">
-                    <li class="footer__navigation-list-item">
-                        <a class="footer__navigation-link" href="#">About</a>
-                    </li>
-                    <li class="footer__navigation-list-item">
-                        <a class="footer__navigation-link" href="#">Terms</a>
-                    </li>
-                    <li class="footer__navigation-list-item">
-                        <a class="footer__navigation-link" href="#">Legal</a>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="footer__navigation">
-                <h4 class="footer__navigation-title">nft</h4>
-                <ul class="footer__navigation-list">
-                    <li class="footer__navigation-list-item">
-                        <a class="footer__navigation-link" href="#">OpenSea</a>
-                    </li>
-                    <li class="footer__navigation-list-item">
-                        <a class="footer__navigation-link" href="#">Maker</a>
-                    </li>
-                    <li class="footer__navigation-list-item">
-                        <a class="footer__navigation-link" href="#">Learn</a>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="footer__navigation">
-                <h4 class="footer__navigation-title">contact</h4>
-                <ul class="footer__navigation-list">
-                    <li class="footer__navigation-list-item">
-                        <a class="footer__navigation-link" href="#">Press</a>
-                    </li>
-                    <li class="footer__navigation-list-item">
-                        <a class="footer__navigation-link" href="#">Support</a>
-                    </li>
-                </ul>
-            </nav>
-            <nav class="footer__navigation">
-                <h4 class="footer__navigation-title">social</h4>
-                <ul class="footer__navigation-list">
-                    <li class="footer__navigation-list-item">
-                        <a class="footer__navigation-link" href="#">Twitter</a>
-                    </li>
-                    <li class="footer__navigation-list-item">
-                        <a class="footer__navigation-link" href="#">Instagram</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="footer__nav-container">
+                <nav class="footer__navigation">
+                    <h4 class="footer__navigation-title">about</h4>
+                    <ul class="footer__navigation-list">
+                        <li class="footer__navigation-list-item">
+                            <a class="footer__navigation-link" href="#">About</a>
+                        </li>
+                        <li class="footer__navigation-list-item">
+                            <a class="footer__navigation-link" href="#">Terms</a>
+                        </li>
+                        <li class="footer__navigation-list-item">
+                            <a class="footer__navigation-link" href="#">Legal</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="footer__navigation">
+                    <h4 class="footer__navigation-title">nft</h4>
+                    <ul class="footer__navigation-list">
+                        <li class="footer__navigation-list-item">
+                            <a class="footer__navigation-link" href="#">OpenSea</a>
+                        </li>
+                        <li class="footer__navigation-list-item">
+                            <a class="footer__navigation-link" href="#">Maker</a>
+                        </li>
+                        <li class="footer__navigation-list-item">
+                            <a class="footer__navigation-link" href="#">Learn</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="footer__navigation">
+                    <h4 class="footer__navigation-title">contact</h4>
+                    <ul class="footer__navigation-list">
+                        <li class="footer__navigation-list-item">
+                            <a class="footer__navigation-link" href="#">Press</a>
+                        </li>
+                        <li class="footer__navigation-list-item">
+                            <a class="footer__navigation-link" href="#">Support</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="footer__navigation">
+                    <h4 class="footer__navigation-title">social</h4>
+                    <ul class="footer__navigation-list">
+                        <li class="footer__navigation-list-item">
+                            <a class="footer__navigation-link" href="#">Twitter</a>
+                        </li>
+                        <li class="footer__navigation-list-item">
+                            <a class="footer__navigation-link" href="#">Instagram</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
 
         <div class="footer__copyright">
