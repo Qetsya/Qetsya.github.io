@@ -39,21 +39,21 @@
     </header>
 
     <main class="main">
-        <article class="first-container wrapper">
-            <section class="first-container__content">
+        <article class="hero">
+            <section class="hero__content">
                 <span class="announcement">launching soon</span>
-                <h1 class="first-container__title">An NFT like no other</h1>
-                <p class="first-container__text">Don't miss out on the release of our new NFT. Sign up below to receive
+                <h1 class="hero__title">An NFT like no other</h1>
+                <p class="hero__text">Don't miss out on the release of our new NFT. Sign up below to receive
                     updates when we go live.</p>
-                <button type="button" class="first-container__button">Sign Up</button>
+                <button type="button" class="hero__button" data="Sign Up"></button>
             </section>
 
-            <section class="first-container__image-box">
+            <section class="hero__image-box">
                 <picture>
-                    <source srcset="assets/graphic.svg" media="(min-width: 768px)">
-                    <img class="first-container__image" src="assets/graphic-small.svg" alt="nft-image">
+                    <source srcset="assets/graphic.png" media="(min-width: 768px)">
+                    <img class="hero__image" src="assets/graphic-small.svg" alt="nft-image">
                 </picture>
-             </section>
+            </section>
         </article>
 
         <article class="notice-container">
@@ -64,53 +64,66 @@
         </article>
 
         <article class="wrapper">
-            <ul class="promoters">
-                <li class="promoters-box"><a href="#">
+            <ul class="backers">
+                <li class="backers-box">
+                    <a href="#">
                         <picture>
                             <source srcset="assets/companies/1.svg" media="(min-width: 768px)">
-                            <img class="promoters-logo" src="assets/companies/1-small.png" alt="boomerang-logo">
+                            <img class="backers-logo" src="assets/companies/1-small.png" alt="boomerang-logo">
                         </picture>
                     </a>
                 </li>
-                <li class="promoters-box">
+                <li class="backers-box">
                     <a href="#">
-                        <img class="promoters-logo" src="assets/companies/2.svg" alt="blimp-logo">
+                        <img class="backers-logo" src="assets/companies/2.svg" alt="blimp-logo">
                     </a>
                 </li>
-                <li class="promoters-box"><a href="#"><img class="promoters-logo" src="assets/companies/3.svg"
-                            alt="qrco-logo"></a></li>
-                <li class="promoters-box"><a href="#"><img class="promoters-logo mobile-invisible"
-                            src="assets/companies/4.svg" alt="open-door-logo"></a></li>
-                <li class="promoters-box"><a href="#"><img class="promoters-logo" src="assets/companies/5.svg"
-                            alt="droplet-logo"></a></li>
+                <li class="backers-box">
+                    <a href="#">
+                        <img class="backers-logo" src="assets/companies/3.svg" alt="qrco-logo">
+                    </a>
+                </li>
+                <li class="backers-box">
+                    <a href="#">
+                        <img class="backers-logo mobile-invisible" src="assets/companies/4.svg" alt="open-door-logo">
+                    </a>
+                </li>
+                <li class="backers-box">
+                    <a href="#">
+                        <img class="backers-logo" src="assets/companies/5.svg" alt="droplet-logo">
+                    </a>
+                </li>
             </ul>
         </article>
 
-        <article class="additional-container">
+        <article class="auction-container">
             <div class="wrapper">
-                <h2 class="additional-container__title">LE Super Rare Auction</h2>
-                <p class="additional-container__text">We have released four limited edition NFTs early which can be bid on
-                via
-                    <a class="additional-container__link" href="#">OpenSea</a>.
+                <h2 class="auction-container__title">LE Super Rare Auction</h2>
+                <p class="auction-container__text">We have released four limited edition NFTs early which can be bid
+                    on
+                    via
+                    <a class="auction-container__link" href="#">OpenSea</a>.
                 </p>
             </div>
 
-            <div class="additional-container__cards">
+            <div class="auction-container__cards">
                 <div class="card">
                     <img src="assets/ntfs/ntf-1.svg" alt="purple-nft">
                     <div class="card-body">
-                        <div class="card-text">
-                            <span class="card-text--bright">gloop series</span>
+                        <div class="card-heading">
+                            <span class="card-heading--bright">gloop series</span>
                             <span>top bid</span>
                         </div>
+
                         <div class="card-name">
                             <h3 class="card-title">Purple Man</h3>
-                            
+
                             <div class="card-bid">
                                 <span class="bid-icon"></span>
                                 <span class="bid-number">2.99 ETH</span>
                             </div>
                         </div>
+
                         <footer class="card-footer">
                             <span>#12983</span>
                             <span>1 day left</span>
@@ -121,18 +134,20 @@
                 <div class="card">
                     <img src="assets/ntfs/nft-2.svg" alt="beige-nft">
                     <div class="card-body">
-                        <div class="card-text">
-                            <span class="card-text--bright">gloop series</span>
+                        <div class="card-heading">
+                            <span class="card-heading--bright">gloop series</span>
                             <span>top bid</span>
                         </div>
+
                         <div class="card-name">
                             <h3 class="card-title">Beige</h3>
-                            
+
                             <div class="card-bid">
                                 <span class="bid-icon"></span>
                                 <span class="bid-number">2.99 ETH</span>
                             </div>
                         </div>
+
                         <footer class="card-footer">
                             <span>#12983</span>
                             <span>1 day left</span>
@@ -143,18 +158,20 @@
                 <div class="card">
                     <img src="assets/ntfs/ntf-3.svg" alt="red-nft">
                     <div class="card-body">
-                        <div class="card-text">
-                            <span class="card-text--bright">gloop series</span>
+                        <div class="card-heading">
+                            <span class="card-heading--bright">gloop series</span>
                             <span>top bid</span>
                         </div>
+
                         <div class="card-name">
                             <h3 class="card-title">Red Man</h3>
-                            
+
                             <div class="card-bid">
                                 <span class="bid-icon"></span>
                                 <span class="bid-number">2.99 ETH</span>
                             </div>
                         </div>
+
                         <footer class="card-footer">
                             <span>#12983</span>
                             <span>1 day left</span>
@@ -165,18 +182,20 @@
                 <div class="card">
                     <img src="assets/ntfs/ntf-4.svg" alt="green-nft">
                     <div class="card-body">
-                        <div class="card-text">
-                            <span class="card-text--bright">gloop series</span>
+                        <div class="card-heading">
+                            <span class="card-heading--bright">gloop series</span>
                             <span>top bid</span>
                         </div>
+
                         <div class="card-name">
                             <h3 class="card-title">Green</h3>
-                            
+
                             <div class="card-bid">
                                 <span class="bid-icon"></span>
                                 <span class="bid-number">2.99 ETH</span>
                             </div>
                         </div>
+
                         <footer class="card-footer">
                             <span>#12983</span>
                             <span>1 day left</span>
@@ -186,22 +205,19 @@
             </div>
         </article>
 
-        <article class="first-container wrapper">
-            <section class="first-container__content">
+        <article class="bottom-hero">
+            <section class="bottom-hero__content">
                 <span class="announcement">launching soon</span>
-                <h1 class="first-container__title">An NFT like no other</h1>
-                <p class="first-container__text">Don't miss out on the release of our new NFT. Sign up below to receive
-                    updates.</p>
-                <button type="button" class="first-container__button">Sign Up</button>
+                <h1 class="hero__title">An NFT like no other</h1>
+                <p class="hero__text">Don't miss out on the release of our new NFT. Sign up below to receive
+                    updates<span class="hero__additional-info"> when we go live</span>.</p>
+                <button type="button" class="hero__button" data="Sign Up"></button>
             </section>
 
-            <picture>
-                <source>
-                <img class="first-container__image" src="assets/upsell-footer-image.svg" alt="nft-image">
-            </picture>
+            <section class="hero__image-box">
+                <img class="hero__image" src="assets/upsell-footer-image.svg" alt="nft-image">
+            </section>
         </article>
-
-
     </main>
 
     <footer class="footer wrapper">
